@@ -1,0 +1,17 @@
+{
+  "bundle": {
+    "srcDir": "/src",
+    "outDir": "/dist",
+    "libDir": "/lib",
+    "emptyOutDir": true
+  },
+  "dev": {
+    "hostname": "localhost",
+    "port": 3000
+  },
+  "server": {
+    "port": 8080,
+    "hostname": "localhost",
+    "middleware": "./server-middleware.js"
+  }
+}
