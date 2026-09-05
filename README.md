@@ -1,6 +1,6 @@
 # chocolajs.dev
 
-This is the repository for the official [Chocola](https://github.com/chocolajs/chocola) website.
+This is the repository behind [chocolajs.dev](https://chocolajs.dev/).
 
 ## Contributing
 
