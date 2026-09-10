@@ -24,6 +24,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "chocola": "^2.0.0-next.9"
+    "chocola": "^2.0.0-next.10"
   }
 }
