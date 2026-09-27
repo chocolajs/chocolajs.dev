@@ -2,6 +2,8 @@
     let self;
     let closeBtn;
 
+    let chocolaVersion = '2.0.0-next.11';
+
     function $runtime() {
         const dismissed = sessionStorage.getItem('chocola-banner-dismissed');
         if (dismissed === '1') {
@@ -22,7 +24,7 @@
             <div class="banner-left">
                 <span class="banner-pill">PREVIEW</span>
                 <span class="banner-text">
-                    You’re viewing <strong>Chocola 2.0.0-next.10</strong>; unstable, breaking changes may still land.
+                    You’re viewing <strong>Chocola {chocolaVersion}</strong>; unstable, breaking changes may still land.
                 </span>
             </div>
             <div class="banner-actions">

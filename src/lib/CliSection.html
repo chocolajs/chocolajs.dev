@@ -1,0 +1,129 @@
+<template>
+    <section class="block surface-section" id="cli">
+        <div class="wrap">
+            <div class="section-head">
+                <div class="eyebrow">CLI</div>
+                <h2>One binary. Three commands.</h2>
+                <p>The portable <code>chocola</code> / <code>chjs</code> CLI is the whole toolchain. No
+                    <code>chocola.config.json</code> to write, no build scripts to maintain — run it from any folder
+                    and sensible defaults kick in.</p>
+            </div>
+
+            <div class="cli-grid">
+                <div class="code-panel">
+                    <div class="demo-head">
+                        <div class="demo-dots"><span></span><span></span><span></span></div>
+                        <div class="demo-filename">dev — hot-reload server</div>
+                    </div>
+                    <pre>
+<span class="com"># start hacking, defaults to localhost:3000</span>
+<br>
+<span class="pink">$</span> chocola dev
+<br>
+<br>
+<span class="com"># pick a port, host, and open the browser</span>
+<br>
+<span class="pink">$</span> chjs dev --port 3000 --host localhost --open
+                </pre>
+                </div>
+
+                <div class="code-panel">
+                    <div class="demo-head">
+                        <div class="demo-dots"><span></span><span></span><span></span></div>
+                        <div class="demo-filename">build — static output</div>
+                    </div>
+                    <pre>
+<span class="com"># src -&gt; dist, components from src/lib</span>
+<br>
+<span class="pink">$</span> chocola build
+<br>
+<br>
+<span class="com"># override dirs, keep existing output</span>
+<br>
+<span class="pink">$</span> chjs build --srcDir src --outDir dist --libDir lib --no-emptyOutDir
+                </pre>
+                </div>
+
+                <div class="code-panel">
+                    <div class="demo-head">
+                        <div class="demo-dots"><span></span><span></span><span></span></div>
+                        <div class="demo-filename">serve — SSR production server</div>
+                    </div>
+                    <pre>
+<span class="com"># serve SSR apps, defaults to localhost:8080</span>
+<br>
+<span class="pink">$</span> chocola serve
+<br>
+<br>
+<span class="com"># custom port, host, and middleware</span>
+<br>
+<span class="pink">$</span> chjs serve --port 8080 --host localhost --middleware ./middleware.js
+                </pre>
+                </div>
+            </div>
+
+            <div class="cli-notes">
+                <div class="cli-note">
+                    <span class="cli-key mono">zero-config</span>
+                    <p><code>chocola.config.json</code> is optional. Skip it and you get
+                        <code>src</code> / <code>dist</code> / <code>lib</code>, dev on
+                        <code>:3000</code>, serve on <code>:8080</code>. Add the file — or pass
+                        <code>--config</code> / <code>[root]</code> — only when you need more.</p>
+                </div>
+                <div class="cli-note">
+                    <span class="cli-key mono">zero-boilerplate</span>
+                    <p>User-authored compiler scripts are legacy. <code>chocola dev</code>,
+                        <code>chocola build</code>, and <code>chocola serve</code> replace hand-rolled
+                        wiring — <code>chjs</code> is the same binary, shorter to type.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<style>
+    .cli-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 28px;
+    }
+
+    @media (max-width: 900px) {
+        .cli-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .cli-notes {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 28px;
+        margin-top: 28px;
+    }
+
+    @media (max-width: 760px) {
+        .cli-notes {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .cli-note {
+        background: var(--surface-2);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-md);
+        padding: 26px 24px;
+    }
+
+    .cli-key {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--gold);
+    }
+
+    .cli-note p {
+        margin: 10px 0 0;
+        font-size: 14px;
+        color: var(--text-muted);
+        line-height: 1.7;
+    }
+</style>

@@ -1,10 +1,10 @@
 <script>
-    let self = new HTMLElement;
-    let btn = new HTMLButtonElement;
-    let installBox = new HTMLDivElement;
-    let promptBefore = new HTMLDivElement;
-    let ogPrompt = new HTMLSpanElement;
-    let successMessage = new HTMLSpanElement;
+    let self;
+    let btn;
+    let installBox;
+    let promptBefore;
+    let ogPrompt;
+    let successMessage;
 
     let installPrompt = "npm i chocola@next";
 
@@ -71,7 +71,8 @@
 
             <h2>Install once. Compile forever.</h2>
 
-            <p>No boilerplate. No plugins to reconcile. Point Chocola at a folder.</p>
+            <p>Zero-config, zero-boilerplate. No <code>chocola.config.json</code> to write, no scripts to maintain
+                — the portable <code>chocola</code> / <code>chjs</code> CLI covers dev, build, and serve.</p>
 
             <div bind:self="installBox" class="install-box">
                 <div bind:self="promptBefore" class="before"></div>
