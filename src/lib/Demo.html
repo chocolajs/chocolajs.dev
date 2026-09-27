@@ -3,13 +3,12 @@
     let btn;
     let log;
 
+    var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var steps = ['resolving bindings …', 'baking component…', 'done'];
+
+
     function $runtime() {
-        var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-        var steps = ['resolving bindings …', 'baking component…', 'done'];
-
         setLabel();
-
         btn.addEventListener('click', () => { actDemo(reduced, steps) });
     }
 
